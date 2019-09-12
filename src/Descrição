@@ -1,1 +1,7 @@
 Commit inicial: Projeto criando jogo famoso da cobrinha !
+
+Commit 3 - Janela Básica. 
+Criando a classe Main configurando colocando seu tamanho, visualização etc..
+criando a classe GamePanel extendendo ao JPanel, cirando variável static final int WHIDTH 
+HEIGHT com suas medidas, adicionado ao construtor sendo instanciado na classe Main e adicionando
+ao frame.
