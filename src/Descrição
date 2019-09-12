@@ -1,7 +1,15 @@
 Commit inicial: Projeto criando jogo famoso da cobrinha !
 
-Commit 3 - Janela B�sica. 
-Criando a classe Main configurando colocando seu tamanho, visualiza��o etc..
-criando a classe GamePanel extendendo ao JPanel, cirando vari�vel static final int WHIDTH 
+Commit 3 - Janela Básica. 
+Criando a classe Main configurando colocando seu tamanho, visualização etc..
+criando a classe GamePanel extendendo ao JPanel, cirando variável static final int WHIDTH 
 HEIGHT com suas medidas, adicionado ao construtor sendo instanciado na classe Main e adicionando
 ao frame.
+
+Commit 4 - Matriz em linhas da janela
+Adicionado métodos na classe GamePanel, start, stop, tickt e paint(Graphics g) a dentro do 
+método paint vamos dar condição de laço for percorrer a váriavel i se for igual a zero; se i for 
+menor que WIDHT dividio por 10; i++, desenharemos a linha g.drawLine i multiplicado por 10, zero, 
+i multiplicado por dez, HEIGHT; criando um outro laço for percorrendo a váriavel i se for igual 
+a zero; se i for menor que HEIGHT dividio por 10; i++; g.drawLine, 0, i multiplicado por 10, HEIGHT,
+i multiplicado por 10; execute o programa observe a o Matriz criada. 
