@@ -8,19 +8,32 @@ public class GamePanel extends JPanel implements Runnable {
 	private static final long serialVersionUID = 1L;
 	
 	public static final int WIDHT = 500, HEIGHT = 500;
+	
+	private Thread thread;
+	
+	private boolean running;
 
 	public GamePanel() {
 		setPreferredSize(new Dimension(WIDHT, HEIGHT));
+		start();
 	}
 	
 	public void start() {
-		
+		running = true;
+		thread = new Thread(this);
+		thread.start();
 	}
 	public void stop() {
-		
+		running = false;
+		try {
+			thread.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
-	public void tickt() {
+	public void tick() {
 		
 	}
 	
@@ -34,7 +47,10 @@ public class GamePanel extends JPanel implements Runnable {
 	}
 	
 	public void run() {
-		
+		while(running) {
+			tick();
+			repaint();
+		}
 	}
 
 }

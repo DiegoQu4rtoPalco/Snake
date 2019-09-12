@@ -13,3 +13,17 @@ menor que WIDHT dividio por 10; i++, desenharemos a linha g.drawLine i multiplic
 i multiplicado por dez, HEIGHT; criando um outro laço for percorrendo a váriavel i se for igual 
 a zero; se i for menor que HEIGHT dividio por 10; i++; g.drawLine, 0, i multiplicado por 10, HEIGHT,
 i multiplicado por 10; execute o programa observe a o Matriz criada. 
+
+Commit 5 - Configurando Thread e criando nova classe BodyPart.
+Criando o objeto private Thread thread, private boolean running, método start running recebe true,
+instanciando o obejto thread = new Thread(this); thread.start(); chamando o método start no construtor
+start(); 
+No método stop, runnning recebe false, adicione thread.join(); aceite exceção try e catch.
+No método run, adicione a condição while, se (running), chame os métodos tick e repaint.
+Crie uma nova classe BodyPart com seu construtor, mais métodos tick e draw(Graphics g), adicione novas 
+variáveis private int xCoor, yCoor, whidth, height; ao construtor adicione aos paramentros int xCoor,
+yCoor, int tileSize, a dentro do contrutor this.xCoor é igual xCoor, this.yCoor é igual a yCoor, agora
+as variaveis whidth e height é igual tileSize.
+No método draw vamos desenhar setando a cor amarela e o fillRect(quadrado), recebendo xCoor multiplicado
+por width, yCoor multiplicado por height, width, height e edicione os métodos getter e setters xCoor e 
+yCoor.
