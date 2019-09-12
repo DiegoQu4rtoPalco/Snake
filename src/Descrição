@@ -27,3 +27,18 @@ as variaveis whidth e height é igual tileSize.
 No método draw vamos desenhar setando a cor amarela e o fillRect(quadrado), recebendo xCoor multiplicado
 por width, yCoor multiplicado por height, width, height e edicione os métodos getter e setters xCoor e 
 yCoor.
+
+Commit 6 - Criando o ArrayList e sua conf, mais Snake aparecendo na janela.
+Chame a classe BodyPart na classe GamePanel private BodyPart b; adicionar o objeto á um ArrayList
+private ArrayList<BodyPart> snake; crie duas varivais private int xCool igual a dez, yCoor igual dez,
+size igual a cinco.
+Instancie ao construtor o snake = new ArrayList<BodyPart>();
+Agora iremos pintar, no método paint usando laço for na variavel int i igual a zero; i menos snake.size();
+i++; snake na variavel i, draw (g);
+No método tick, condição se snake.size for igual a zero, objeto b é igual instancia de BodyPart com parametros
+xCoor, yCoor, 10, snake.add(b); após chave tiks++; criar variavel ticks igual a zero.
+Criar variaveis private boolean right = true, left = false, up = false, down = false;
+Ainda no método tick, condição se ticks for maior que vinte cinco mil, if(right) xCoor++; if(left) xCoor--;
+if(up) yCoor--;if(down) yCoor++; ticks recebe zero, objeto b igual instancia BodyPart(xCoor, yCoor, 10);
+snake.add(b); proxima condição se snake.size > size, snake.remove(0);
+Para limpar a tela adicione ao métor paint g.clearRect(0, 0, WIDHT, WHEIGHT);

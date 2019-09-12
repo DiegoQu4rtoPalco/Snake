@@ -17,7 +17,7 @@ public class BodyPart {
 	}
 	
 	public void draw(Graphics g) {
-		g.setColor(Color.YELLOW);
+		g.setColor(Color.BLACK);
 		g.fillRect(xCoor * whidth, yCoor * height, whidth, height);
 	}
 
