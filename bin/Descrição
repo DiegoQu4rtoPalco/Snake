@@ -54,3 +54,15 @@ VK_UP && !down, up true, right false, left false;
 outra condição
 VK_DOWN && !up, down true, right false, left false
 No construtor adicione setFocusable(true) mais addKeyListener(this). 
+
+Commit 8 - Snake aumentando de tamanho, apple nascendo e sendo removida.
+Criando nova classe Apple com as mesmas configurações da classe BodyPart, chame na classe GamePanel private Apple
+apple, depois chame o obejto para um ArrayList com o nome de apples, crie um Random r, instancie o ArrayList apples
+e Random r no construtor.
+No método paint usar laço for para percorrer a variavel i, int i recebe zero; se i < apples.size(); i++; dentro das 
+aspas objeto apples na variavel i, método draw no parametro g.
+Condição no método tick, se quantidade de apples for igual a zero, xCoor = r.nextInt(49);
+yCoor = r.nextInt(49); instancie a classe apple, depois apples.add(apple).
+Para cada passada pela apple, snake aumenta de tamanho, usando o laço for na váriavel i, i igual a zero,
+i menor que quantidade de apples, i mais mais, condição se xCoor igual apples na variavel i, getxCoor &&
+yCoor igual apples na variavel i, getyCoor, dentro das aspas size++, apples.remove(i), i++
