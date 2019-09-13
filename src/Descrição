@@ -42,3 +42,15 @@ Ainda no método tick, condição se ticks for maior que vinte cinco mil, if(rig
 if(up) yCoor--;if(down) yCoor++; ticks recebe zero, objeto b igual instancia BodyPart(xCoor, yCoor, 10);
 snake.add(b); proxima condição se snake.size > size, snake.remove(0);
 Para limpar a tela adicione ao métor paint g.clearRect(0, 0, WIDHT, WHEIGHT);
+
+Commit 7 - Movimento do Snake
+Implementar KeyListener e adicionar seus métodos em seguida, parametros KeyEvent passa a ser a letra e
+no método KeyPressed, criar variavel int key = e.getKeyCode(); condição se key for igual a KeyEvent.VK_RIGHT
+&& !left, right recebe true, up false, down false, 
+copie a mesma condição mude apenas 
+VK_LEFT && !RIGHT, left true, up false, down false; 
+outra condição 
+VK_UP && !down, up true, right false, left false;
+outra condição
+VK_DOWN && !up, down true, right false, left false
+No construtor adicione setFocusable(true) mais addKeyListener(this). 
